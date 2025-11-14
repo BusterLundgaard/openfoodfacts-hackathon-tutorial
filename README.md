@@ -3,7 +3,7 @@ The WORLD WIDE WEB, with its HTTP and HTML and JAVSCRIPT and FRAMEWORKS and COOK
 
 Before "the internet" there were *internets*, emphasis on the plural. And before internets, there were ... just computers connected to other computers. Actually this idea of connecting one computer to another goes back to the very start of computing. Remmember: Computers used to be *huge* and extremely expensive! They bassicly needed their own room. It was essential then that the one computer in the one room could be interfaced with through various interfaces/terminals throughout the building. The first of these interaction devices was a so-called "teleprinter", which was more or less just a traditional typewriter (think the old loud clicky device!) hooked up to a signal so that it could write itself onto paper, and it's input hooked up to a signal so that they could be sent to the central computer: 
 
-![Teletyper](figures/teletype.webp)
+![](figures/teletype.webp)
 
 So you typed a command to the central computer, and it would send back a signal that litteraly printed out the result on a piece of paper in front of you. Here's some early ASCII art produced this way:
 
