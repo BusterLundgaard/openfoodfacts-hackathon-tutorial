@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-US">
+  <body>
+	  <!-- CONTENT (HTML) -->
+	  <p>Hello, i am a paragraph!</p>
+	  <p>There'll be some spacing between paragraphs, as you'd expect</p>
+	  <p>Though if you try to just add spacing yourself inside a paragraph like this:
+
+	  Then it doesn't appear! HTML doesn't care about the spacing in your text document like that</p>
+	  <h1> I am header! </h1>
+	  <h2> There's </h2>
+	  <h3> different </h3>
+	  <h4> levels of </h4>
+	  <h5> header ... </h5>
+
+	  <div>
+		HTML elements can be either <i> block level </i> or <i> inline-level </i>.
+		Block-level elements start a new line/break up the flow, while inline-level elements are in-line with the rest of the text.
+		This "div" we're in right now is a block-level element, the italics tag <i></i> is a inline level element.
+		<p>
+			We can give elements ID's and classes that can be used in our CSS and Javascript. With that, we can
+			do cool things like this <span class="my-cool-class"> red text </span> here.
+		</p>
+	  </div>
+
+		<p>
+		"div" is the most generic block-level container, and "span" is the most generic inline-level container. 
+		There's a lot of elements to play around with in HTML, and you can find a list <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements"> at this link</a>.
+		</p>
+
+		<div>
+			Type a barcode: <input id="barcode-textbox" type="text">.
+			<div>
+				<button id="search-button"> Search information </button>
+			</div>
+			<div id="my-information-container">
+			The information should appear here once you press the button and the request is done : ) .
+			</div>
+		</div>
+
+<!-- STYLING (CSS) -->
+<style>
+.my-cool-class {
+	color: red;
+	background-color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+</style>
+
+<!-- FUNCTIONALITY (JAVASCRIPT) -->
+<script>
+
+// Get some elements we need:
+let barcode_field = document.getElementById("barcode-textbox");
+let search_button = document.getElementById("search-button");
+let result_container = document.getElementById("my-information-container");
+
+// Define some functions
+function display_found_item(item_information) {
+	result_container.innerHTML = "Found item! Item keywords: " + item_information.product._keywords;
+}
+
+function item_couldnt_be_found() {
+	result_container.innerHTML = "Sorry, item couldn't be found :(";
+}
+
+function do_search() {
+	let barcode = barcode_field.value;
+	console.log("barcode is: " + barcode);
+
+	// fetch information from server
+	fetch("https://world.openfoodfacts.net/api/v2/product/" + barcode + ".json", {
+	  method: "GET",
+	  headers: { Authorization: "Basic " + btoa("off:off") },
+	})
+	// when it is retrieved, *then* we proceed to decode it
+	.then(response => response.json() )
+	// when it is decoded *then* we proceed to call our display_search() function with the decoded data
+	// if there was an error, we call another function instead
+	.then(display_found_item, item_couldnt_be_found);
+}
+
+// Say what you want to happen when the user clicks the button
+// try searching for this id: 3274080005003
+search_button.addEventListener("click", (e)=>do_search());
+
+</script>
+
+  </body>
+</html>

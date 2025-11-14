@@ -171,6 +171,7 @@ I don't actually have time to explain much HTML, CSS or Javascript here, but you
 - [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [List of CSS attributes](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 - [Introduction to Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 I would *highly* reccomend reading a bit from these docs instead of googling every single individual question you have. There's so much utter garbage out there on the internet, especially when it comes to technical questions, and especially when its something where money is involved like websites. Mozilla docs are so excellent you really don't need to spend a bunch of time surfing around for some forum post that answers exactly your question.
 
 There's *a lot* of very unintuitive and strange things in both HTML, Javascript, and *especially* in CSS. It's not just you: There's genuinely some bonkers and strange decisions here that can't be changed now as it would break older websites.
