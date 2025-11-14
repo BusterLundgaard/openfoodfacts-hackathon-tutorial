@@ -7,7 +7,7 @@ Before "the internet" there were *internets*, emphasis on the plural. And before
 
 So you typed a command to the central computer, and it would send back a signal that litteraly printed out the result on a piece of paper in front of you. Here's some early ASCII art produced this way:
 
-**The early teleprinter ASCII art**
+![Ascii art](figures/ascii.jpg)
 
 Eventually the interfaces people used to communicate with the central computer turned into screens and keyboards, more similar to what we know from today. The point here is though, that from a very early point, computers *sort of* had the hardware to send and recieve bits to other computers/and-or-devices. Remmember this is all we're doing at the end of the day: we're sending a bunch of `01001010101001`'s and computers interpret these 0's and 1's however they want, do some logic, then send back some other `0100100001110`'s. 
 
