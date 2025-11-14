@@ -21,7 +21,7 @@ Central to the "Internet protocol suite" is HTTP: The Hyper Text Tranfer **Proto
 
 Central to HTTP was its simplicity; The whole thing could be written on a whiteboard, and you can see the original specification here: https://www.w3.org/Protocols/HTTP/AsImplemented.html. It more or less just says: "If you host a folder on your computer with some .HTML files you'd like to share, I can request one of these files by sending you "GET http:your-super-cool-address/path/to/your/file", and your computer will react to this message by indeed sending me `file.html`. If your computer runs a database, say a databse of food, and I'd like to search for an item in this database, I can do `GET http:your-super-cool-address?name=cheese&taste=strong`, ie append "?" plus some search parameters like `name=cheese` and `taste=strong` to my request.
 
-Let's test this! Rick click any part of this website and click "inspect". You should now see a developer menu showing you how the website is built up. It also gives you a *console* you can use to execute commands. If you're on Firefox, it should look something like this:
+Let's test this! Right click any part of this website and click "inspect". You should now see a developer menu showing you how the website is built up. It also gives you a *console* you can use to execute commands. If you're on Firefox, it should look something like this:
 
 ** Picture of the firefox developer menu here **
 
