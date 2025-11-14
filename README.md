@@ -3,7 +3,7 @@ The WORLD WIDE WEB, with its HTTP and HTML and JAVSCRIPT and FRAMEWORKS and COOK
 
 Before "the internet" there were *internets*, emphasis on the plural. And before internets, there were ... just computers connected to other computers. Actually this idea of connecting one computer to another goes back to the very start of computing. Remmember: Computers used to be *huge* and extremely expensive! They bassicly needed their own room. It was essential then that the one computer in the one room could be interfaced with through various interfaces/terminals throughout the building. The first of these interaction devices was a so-called "teleprinter", which was more or less just a traditional typewriter (think the old loud clicky device!) hooked up to a signal so that it could write itself onto paper, and it's input hooked up to a signal so that they could be sent to the central computer: 
 
-**Picture of a teletyper here**
+![Teletyper](figures/teletype.webp)
 
 So you typed a command to the central computer, and it would send back a signal that litteraly printed out the result on a piece of paper in front of you. Here's some early ASCII art produced this way:
 
@@ -13,7 +13,7 @@ Eventually the interfaces people used to communicate with the central computer t
 
 People started going further, as in, sending their data over longer distances. In October 29. 1969, Leonard Kleinrock attempted to send a message to Charley Kline 350 miles away, sent over a telephone line (which aren't magic, they're literal lines, really long wires!). He tried to write "login", but the process crashed halfway through, so he just sent "lo". He then tried again, meaning that the first three letters sent over a long-distance network were litteraly "lol". Fun facts aside, this was the beginning of the Arpanet.
 
-**image of the arpanet access points here**
+![arpanet](figures/arpanet.png)
 
 If I want to communicate with you through only 0's and 1's, then we need some system we use to interpret our messages. Otherwise its all random noise. If we want *many* computers communicating, we also want a standardized system so that everyone aren't doing their own things and we get a huge mess. Moreso than just a system for interpreting the actual 0's and 1's, we need a protocol for *when* we send *what* to each other. Communication on the Arpanet was *sort of* structured, but not nearly as structured and well-defined as it is on "the internet" today. The arpanet grew and developed significantly over two decades, and it was first in 1989 we got the complete "Internet protocol suite".
 
@@ -23,7 +23,7 @@ Central to HTTP was its simplicity; The whole thing could be written on a whiteb
 
 Let's test this! Right click any part of this website and click "inspect". You should now see a developer menu showing you how the website is built up. It also gives you a *console* you can use to execute commands. If you're on Firefox, it should look something like this:
 
-** Picture of the firefox developer menu here **
+![console](figures/console.png)
 
 Now paste the following into this console:
 
@@ -44,7 +44,7 @@ fetch("https://world.openfoodfacts.org/cgi/search.pl?search_terms=breakfast%20ce
 ```
 You should hopefully now see an "Object" that you can open up to see a list of "products" that match your search criteria:
 
-** image here of the response you get **
+![result](figures/console_result.png)
 
 Let's break down what's happening here a bit more. We request the address "world.openfoodfacts.org", specifically its search engine at the path "/cgi/search.pl", using of course the "HTTPS" (http-secure) protocol. We add the "?" to give it a list of parameters to use:
 ```
